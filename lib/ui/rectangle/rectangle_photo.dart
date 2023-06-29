@@ -1,27 +1,18 @@
 import 'package:flutter/material.dart';
-import '../../model/pixabay_dto.dart';
-import '../detail/detail_screen.dart';
+import 'package:provider/provider.dart';
+import '../../model/pixabay_provider.dart';
+import '../detail/detail_screen.dart'; // Add your path to the provider here
 
-
-class RactanglePhoto extends StatefulWidget {
-  final List<PixabayDto> photos;
-
-  const RactanglePhoto({required this.photos});
-
-  @override
-  _RactanglePhotoState createState() => _RactanglePhotoState();
-}
-
-class _RactanglePhotoState extends State<RactanglePhoto> {
-  PixabayDto? selectedPhoto;
-
+class RactanglePhoto extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
+    var pixabayProvider = Provider.of<PixabayProvider>(context);
+
     return GridView.builder(
       shrinkWrap: true,
       physics: const NeverScrollableScrollPhysics(),
       padding: const EdgeInsets.all(10.0),
-      itemCount: widget.photos.length,
+      itemCount: pixabayProvider.pixabayList.length,
       gridDelegate: const SliverGridDelegateWithFixedCrossAxisCount(
         crossAxisCount: 2,
         crossAxisSpacing: 10.0,
@@ -29,7 +20,7 @@ class _RactanglePhotoState extends State<RactanglePhoto> {
         childAspectRatio: 1.0,
       ),
       itemBuilder: (BuildContext context, int index) {
-        final photo = widget.photos[index];
+        final photo = pixabayProvider.pixabayList[index];
         return GestureDetector(
           onTap: () {
             Navigator.push(

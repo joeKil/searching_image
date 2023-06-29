@@ -21,7 +21,7 @@ class PixabayDto {
     required this.downloads,
   });
 
-  factory PixabayDto.fromJson(Map<String, dynamic> json) => _$PixabayDTOFromJson(json);
+  factory PixabayDto.fromJson(Map<String, dynamic> json) => _$PixabayDtoFromJson(json);
 
-  Map<String, dynamic> toJson() => _$PixabayDTOToJson(this);
+  Map<String, dynamic> toJson() => _$PixabayDtoToJson(this);
 }
