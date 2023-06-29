@@ -4,7 +4,7 @@ import '../detail/detail_screen.dart';
 
 
 class RactanglePhoto extends StatefulWidget {
-  final List<PixabayDTO> photos;
+  final List<PixabayDto> photos;
 
   const RactanglePhoto({required this.photos});
 
@@ -13,7 +13,7 @@ class RactanglePhoto extends StatefulWidget {
 }
 
 class _RactanglePhotoState extends State<RactanglePhoto> {
-  PixabayDTO? selectedPhoto;
+  PixabayDto? selectedPhoto;
 
   @override
   Widget build(BuildContext context) {

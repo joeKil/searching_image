@@ -4,7 +4,7 @@ import 'package:json_annotation/json_annotation.dart';
 part 'pixabay_dto.g.dart';
 
 @JsonSerializable(explicitToJson: true)
-class PixabayDTO {
+class PixabayDto {
   final int id;
   final String webformatURL;
   final String largeImageURL;
@@ -12,7 +12,7 @@ class PixabayDTO {
   final int views;
   final int downloads;
 
-  PixabayDTO({
+  PixabayDto({
     required this.id,
     required this.webformatURL,
     required this.largeImageURL,
@@ -21,7 +21,7 @@ class PixabayDTO {
     required this.downloads,
   });
 
-  factory PixabayDTO.fromJson(Map<String, dynamic> json) => _$PixabayDTOFromJson(json);
+  factory PixabayDto.fromJson(Map<String, dynamic> json) => _$PixabayDTOFromJson(json);
 
   Map<String, dynamic> toJson() => _$PixabayDTOToJson(this);
 }

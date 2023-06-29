@@ -12,7 +12,7 @@ class MainScreen extends StatefulWidget {
 }
 
 class _MainScreenState extends State<MainScreen> {
-  List<PixabayDTO> photos = [];
+  List<PixabayDto> photos = [];
 
   Future<void> searchPhotos(String query) async {
     photos = await fetchPhotos(query);

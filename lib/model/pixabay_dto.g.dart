@@ -6,7 +6,7 @@ part of 'pixabay_dto.dart';
 // JsonSerializableGenerator
 // **************************************************************************
 
-PixabayDTO _$PixabayDTOFromJson(Map<String, dynamic> json) => PixabayDTO(
+PixabayDto _$PixabayDTOFromJson(Map<String, dynamic> json) => PixabayDto(
       id: json['id'],
       webformatURL: json['webformatURL'] as String,
       largeImageURL: json['largeImageURL'] as String,
@@ -15,7 +15,7 @@ PixabayDTO _$PixabayDTOFromJson(Map<String, dynamic> json) => PixabayDTO(
       downloads: json['downloads'] as int,
     );
 
-Map<String, dynamic> _$PixabayDTOToJson(PixabayDTO instance) =>
+Map<String, dynamic> _$PixabayDTOToJson(PixabayDto instance) =>
     <String, dynamic>{
       'id': instance.id,
       'webformatURL': instance.webformatURL,
