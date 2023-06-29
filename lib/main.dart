@@ -1,15 +1,12 @@
-import 'dart:js';
-
 import 'package:flutter/material.dart';
 import 'package:provider/provider.dart';
+import 'package:searching_image/model/pixabay_provider.dart';
 import 'package:searching_image/ui/main/main_screen_page.dart';
-
-import 'model/pixabay_dto.dart';
 
 void main() {
   runApp(
     ChangeNotifierProvider(
-      create: (context) => PixabayDto(),
+      create: (context) => PixabayProvider(),
       child: MyApp(),
     ),
   );
