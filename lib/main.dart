@@ -1,13 +1,13 @@
 import 'package:flutter/material.dart';
 import 'package:provider/provider.dart';
-import 'package:searching_image/model/pixabay_provider.dart';
-import 'package:searching_image/ui/main/main_screen_page.dart';
+import 'package:searching_image/ui/main/main_view_model.dart';
+import 'package:searching_image/ui/main/main_screen.dart';
 
 void main() {
   runApp(
     ChangeNotifierProvider(
-      create: (context) => PixabayProvider(),
-      child: MyApp(),
+      create: (context) => MainViewModel(),
+      child: const MyApp(),
     ),
   );
 }
