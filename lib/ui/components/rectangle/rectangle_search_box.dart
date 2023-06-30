@@ -2,10 +2,10 @@ import 'package:flutter/material.dart';
 
 import '../search/search.dart';
 
-class RactancgleSeachBox extends StatelessWidget {
+class RectangleSearchBox extends StatelessWidget {
   final ValueChanged<String> onSearch;
 
-  const RactancgleSeachBox({required this.onSearch});
+  const RectangleSearchBox({super.key, required this.onSearch});
 
   @override
   Widget build(BuildContext context) {
